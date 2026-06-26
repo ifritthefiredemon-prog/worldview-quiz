@@ -6,185 +6,124 @@
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:
-    radial-gradient(circle at top,#1b3b6f,#0b1220 70%);
+    background:radial-gradient(circle at top,#1b3b6f,#0b1220 70%);
     color:white;
     min-height:100vh;
-    overflow:hidden;
+    overflow-x:hidden;
 }
+
+/* ==========================
+   Navigation Bar
+========================== */
+
 nav{
-
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     padding:20px 60px;
-
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
-
     background:rgba(11,19,43,.65);
-
     backdrop-filter:blur(12px);
-
     border-bottom:1px solid rgba(255,255,255,.1);
-
+    z-index:1000;
 }
 
 nav h2{
-
     color:white;
-
     font-size:28px;
-
 }
 
 nav div{
-
     display:flex;
-
     gap:30px;
-
 }
 
 nav a{
-
     text-decoration:none;
-
     color:white;
-
     font-size:18px;
-
     transition:.3s;
-
 }
 
 nav a:hover{
-
     color:#3A86FF;
-
 }
+
+/* ==========================
+   Hero Section
+========================== */
+
 .hero{
-
     min-height:100vh;
-
-    padding-top:100px;
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
-    padding:30px;
-
+    padding:100px 30px 30px;
 }
 
 .hero-content{
-
     max-width:800px;
-
     background:rgba(255,255,255,.08);
-
     padding:60px;
-
     border-radius:25px;
-
     backdrop-filter:blur(15px);
-
     border:1px solid rgba(255,255,255,.15);
-
     box-shadow:0 15px 40px rgba(0,0,0,.4);
-
 }
 
 h1{
-
     font-size:4rem;
-
     margin-bottom:20px;
-
     text-shadow:0 0 20px rgba(255,255,255,.3);
-
 }
 
 p{
-
     font-size:1.3rem;
-
     line-height:1.8;
-
     color:#d8d8d8;
-
 }
 
 button{
-
     margin-top:40px;
-
     padding:18px 45px;
-
     border:none;
-
     border-radius:100px;
-
     font-size:20px;
-
     cursor:pointer;
-
     color:white;
-
     background:linear-gradient(135deg,#00c6ff,#0072ff);
-
     transition:.3s;
-
     box-shadow:0 0 25px rgba(0,114,255,.45);
-
 }
 
 button:hover{
-
     transform:translateY(-5px) scale(1.05);
-
     box-shadow:0 0 40px rgba(0,198,255,.8);
-
 }
+
+/* ==========================
+   About Section
+========================== */
+
 .about{
-
     background:#111827;
-
     padding:100px 40px;
-
     text-align:center;
-
 }
 
 .about h2{
-
     font-size:42px;
-
     margin-bottom:30px;
-
 }
 
 .about p{
-
     max-width:850px;
-
     margin:auto;
-
     font-size:22px;
-
     line-height:1.8;
-
     color:#d1d5db;
-
 }
