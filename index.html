@@ -8,23 +8,27 @@
 
     <title>The Worldview Compass</title>
 
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
+<!-- ================= NAVIGATION ================= -->
+
 <nav>
 
     <div class="logo-container">
 
-    <img src="images/logo.png" class="logo">
+        <img src="images/logo.png" class="logo" alt="Worldview Compass Logo">
 
-    <h2>Worldview Compass</h2>
+        <h2>Worldview Compass</h2>
 
     </div>
 
-    <div>
+    <div class="nav-links">
 
         <a href="#">Home</a>
         <a href="#">About</a>
@@ -35,148 +39,164 @@
 
 </nav>
 
+<!-- ================= HERO ================= -->
+
 <section class="hero">
 
-<div class="hero-content">
+    <div class="hero-left">
 
-<h1>🌍 The Worldview Compass</h1>
+        <h1>🌍 The Worldview Compass</h1>
 
-<p>
+        <p>
 
-Discover the philosophical worldview that best reflects your beliefs, values, and perspective.
+            Discover the philosophical worldview that best reflects your beliefs,
+            values, and perspective.
 
-</p>
+        </p>
 
-<button id="openAssessment">
+        <button id="openAssessment">
 
-Begin Assessment
+            Begin Assessment
 
-</button>
+        </button>
 
-</div>
+    </div>
+
+    <div class="hero-right">
+
+        <img src="images/hero.png"
+             class="hero-image"
+             alt="Worldview Compass Illustration">
+
+    </div>
 
 </section>
 
-<!-- ===================== -->
+<!-- ================= ASSESSMENT MODAL ================= -->
 
 <div id="assessmentModal" class="modal">
 
-<div class="modal-content">
+    <div class="modal-content">
 
-<h2>Welcome!</h2>
+        <h2>Welcome!</h2>
 
-<p>
+        <p>
 
-There are no right or wrong answers.
+            There are no right or wrong answers.
 
-Respond honestly based on what you genuinely believe.
+            Respond honestly based on what you genuinely believe.
 
-</p>
+        </p>
 
-<div class="input-group">
+        <div class="input-group">
 
-<label>
+            <label>
 
-What should we call you? (Optional)
+                What should we call you? (Optional)
 
-</label>
+            </label>
 
-<input
-type="text"
-id="nickname"
-placeholder="Alex, NightOwl, CuriousMind...">
+            <input
+                type="text"
+                id="nickname"
+                placeholder="Alex, NightOwl, CuriousMind...">
+
+        </div>
+
+        <div class="input-group">
+
+            <label>
+
+                How familiar are you with philosophy or worldviews?
+
+            </label>
+
+            <select id="knowledge">
+
+                <option>I've never studied philosophy</option>
+
+                <option>I know a little</option>
+
+                <option>I know several philosophical ideas</option>
+
+                <option>I regularly study philosophy</option>
+
+                <option>I have an advanced understanding</option>
+
+            </select>
+
+        </div>
+
+        <div class="checkbox">
+
+            <input type="checkbox" id="agree">
+
+            <label for="agree">
+
+                I agree to anonymously contribute my responses to improve The Worldview Compass.
+
+            </label>
+
+        </div>
+
+        <div class="instructions">
+
+            <h3>Before You Begin</h3>
+
+            <ul>
+
+                <li>40 thought-provoking statements</li>
+
+                <li>Approximately 8–12 minutes</li>
+
+                <li>There are no right or wrong answers</li>
+
+                <li>Answer honestly based on your beliefs</li>
+
+            </ul>
+
+        </div>
+
+        <button id="startQuiz">
+
+            Begin Journey
+
+        </button>
+
+    </div>
 
 </div>
 
-<div class="input-group">
-
-<label>
-
-How familiar are you with philosophy or worldviews?
-
-</label>
-
-<select id="knowledge">
-
-<option>I've never studied philosophy</option>
-
-<option>I know a little</option>
-
-<option>I know several philosophical ideas</option>
-
-<option>I regularly study philosophy</option>
-
-<option>I have an advanced understanding</option>
-
-</select>
-
-</div>
-
-<div class="checkbox">
-
-<input type="checkbox" id="agree">
-
-<label for="agree">
-
-I agree to anonymously contribute my responses to improve The Worldview Compass.
-
-</label>
-
-</div>
-
-<div class="instructions">
-
-<h3>Before You Begin</h3>
-
-<ul>
-
-<li>40 statements</li>
-
-<li>Approximately 8–12 minutes</li>
-
-<li>There are no right or wrong answers</li>
-
-<li>Answer as honestly as possible</li>
-
-</ul>
-
-</div>
-
-<button id="startQuiz">
-
-Begin Journey
-
-</button>
-
-</div>
-
-</div>
-
-<!-- ===================== -->
+<!-- ================= LOADING SCREEN ================= -->
 
 <div id="loadingScreen">
 
-<div class="loader">
+    <div class="loader">
 
-<h2>
+        <img
+            src="images/logo.png"
+            class="loading-logo"
+            alt="Worldview Compass Logo">
 
-🧭 Preparing Your Assessment
+        <h2>
 
-</h2>
+            Preparing Your Assessment
 
-<p id="loadingText">
+        </h2>
 
-Calibrating your Worldview Compass...
+        <p id="loadingText">
 
-</p>
+            Calibrating your Worldview Compass...
 
-<div class="progressBar">
+        </p>
 
-<div id="progressFill"></div>
+        <div class="progressBar">
 
-</div>
+            <div id="progressFill"></div>
 
-</div>
+        </div>
+
+    </div>
 
 </div>
 
