@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>The Worldview Compass</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
@@ -25,7 +29,7 @@
 
 </nav>
 
-<div class="hero">
+<section class="hero">
 
 <div class="hero-content">
 
@@ -33,62 +37,145 @@
 
 <p>
 
-Every person views reality through a unique lens.
-
-Discover the beliefs, values, and principles that shape how you understand yourself, others, and the world.
+Discover the philosophical worldview that best reflects your beliefs, values, and perspective.
 
 </p>
 
-<button>Start Assessment</button>
+<button id="openAssessment">
+
+Begin Assessment
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ===================== -->
+
+<div id="assessmentModal" class="modal">
+
+<div class="modal-content">
+
+<h2>Welcome!</h2>
+
+<p>
+
+There are no right or wrong answers.
+
+Respond honestly based on what you genuinely believe.
+
+</p>
+
+<div class="input-group">
+
+<label>
+
+What should we call you? (Optional)
+
+</label>
+
+<input
+type="text"
+id="nickname"
+placeholder="Alex, NightOwl, CuriousMind...">
+
+</div>
+
+<div class="input-group">
+
+<label>
+
+How familiar are you with philosophy or worldviews?
+
+</label>
+
+<select id="knowledge">
+
+<option>I've never studied philosophy</option>
+
+<option>I know a little</option>
+
+<option>I know several philosophical ideas</option>
+
+<option>I regularly study philosophy</option>
+
+<option>I have an advanced understanding</option>
+
+</select>
+
+</div>
+
+<div class="checkbox">
+
+<input type="checkbox" id="agree">
+
+<label for="agree">
+
+I agree to anonymously contribute my responses to improve The Worldview Compass.
+
+</label>
+
+</div>
+
+<div class="instructions">
+
+<h3>Before You Begin</h3>
+
+<ul>
+
+<li>40 statements</li>
+
+<li>Approximately 8–12 minutes</li>
+
+<li>There are no right or wrong answers</li>
+
+<li>Answer as honestly as possible</li>
+
+</ul>
+
+</div>
+
+<button id="startQuiz">
+
+Begin Journey
+
+</button>
 
 </div>
 
 </div>
 
-<section class="about">
+<!-- ===================== -->
 
-    <h2>🌍 What is a Worldview?</h2>
+<div id="loadingScreen">
 
-    <p>
-        A worldview is the collection of beliefs, assumptions, and values
-        through which you interpret reality. It shapes how you understand
-        truth, morality, purpose, knowledge, society, and human nature.
-    </p>
+<div class="loader">
 
-</section>
-<section class="features">
+<h2>
 
-    <h2>✨ What You'll Discover</h2>
+🧭 Preparing Your Assessment
 
-    <div class="cards">
+</h2>
 
-        <div class="card">
-            <h3>🧠 Core Values</h3>
-            <p>Discover the principles that guide your decisions.</p>
-        </div>
+<p id="loadingText">
 
-        <div class="card">
-            <h3>⚖️ Moral Reasoning</h3>
-            <p>Learn how you decide what is right and wrong.</p>
-        </div>
+Calibrating your Worldview Compass...
 
-        <div class="card">
-            <h3>🌍 Social Outlook</h3>
-            <p>See how you view society, freedom, and community.</p>
-        </div>
+</p>
 
-        <div class="card">
-            <h3>📚 View of Truth</h3>
-            <p>Understand how you determine what is true.</p>
-        </div>
+<div class="progressBar">
 
-        <div class="card">
-            <h3>✨ Sense of Meaning</h3>
-            <p>Explore where your purpose and meaning come from.</p>
-        </div>
+<div id="progressFill"></div>
 
-    </div>
+</div>
 
-</section>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
