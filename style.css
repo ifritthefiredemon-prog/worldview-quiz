@@ -347,3 +347,139 @@ nav a:hover{
         padding:22px;
     }
                           }
+/* ========================= */
+/* HERO LAYOUT */
+/* ========================= */
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:100vh;
+    padding:120px 8%;
+    gap:60px;
+}
+
+.hero-left{
+    flex:1;
+}
+
+.hero-right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-image{
+    width:100%;
+    max-width:650px;
+    border-radius:20px;
+    box-shadow:0 20px 50px rgba(0,0,0,.45);
+}
+
+.hero-left h1{
+    font-size:4rem;
+    margin-bottom:25px;
+}
+
+.hero-left p{
+    font-size:1.3rem;
+    line-height:1.8;
+    margin-bottom:35px;
+    color:#d1d5db;
+}
+
+/* ========================= */
+/* NAVBAR LOGO */
+/* ========================= */
+
+.logo-container{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo{
+    width:50px;
+    height:50px;
+}
+
+/* ========================= */
+/* LOADING SCREEN */
+/* ========================= */
+
+.loading-logo{
+    width:110px;
+    margin-bottom:20px;
+    animation:spin 6s linear infinite;
+}
+
+@keyframes spin{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media(max-width:900px){
+
+.hero{
+
+    flex-direction:column;
+    text-align:center;
+    padding-top:120px;
+
+}
+
+.hero-left{
+
+    order:2;
+
+}
+
+.hero-right{
+
+    order:1;
+
+}
+
+.hero-left h1{
+
+    font-size:3rem;
+
+}
+
+.hero-image{
+
+    max-width:450px;
+
+}
+
+nav{
+
+    padding:15px 20px;
+
+}
+
+nav div{
+
+    gap:15px;
+
+}
+
+nav a{
+
+    font-size:15px;
+
+}
+
+}
