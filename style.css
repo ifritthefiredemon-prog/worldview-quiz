@@ -157,3 +157,34 @@ button:hover{
     box-shadow:0 0 40px rgba(0,198,255,.8);
 
 }
+.about{
+
+    background:#111827;
+
+    padding:100px 40px;
+
+    text-align:center;
+
+}
+
+.about h2{
+
+    font-size:42px;
+
+    margin-bottom:30px;
+
+}
+
+.about p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#d1d5db;
+
+}
