@@ -3,7 +3,7 @@
 // Question Bank v1.0
 // =======================================
 
-const questions = [
+window.questions = [
 
     // =======================================
     // SECTION 1 – TRUTH & KNOWLEDGE
