@@ -26,6 +26,11 @@ const nav = document.querySelector("nav");
 
 let answers = new Array(questions.length).fill(null);
 
+let currentQuestion = 0;
+
+const nextButton = document.getElementById("nextQuestion");
+const prevButton = document.getElementById("prevQuestion");
+
 const nextButton = document.getElementById("nextQuestion");
 const prevButton = document.getElementById("prevQuestion");
 
