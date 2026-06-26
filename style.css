@@ -12,11 +12,70 @@ body{
     min-height:100vh;
     overflow:hidden;
 }
+nav{
 
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:20px 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(11,19,43,.65);
+
+    backdrop-filter:blur(12px);
+
+    border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+nav h2{
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+nav div{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:white;
+
+    font-size:18px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    color:#3A86FF;
+
+}
 .hero{
 
-    height:100vh;
+    min-height:100vh;
 
+    padding-top:100px;
     display:flex;
 
     justify-content:center;
