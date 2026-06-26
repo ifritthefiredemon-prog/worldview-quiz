@@ -139,3 +139,18 @@ function loadQuestion() {
     quizProgressFill.style.width = progress + "%";
 
 }
+// ==========================
+// NEXT QUESTION
+// ==========================
+
+nextButton.addEventListener("click", () => {
+
+    if (currentQuestion < questions.length - 1) {
+
+        currentQuestion++;
+
+        loadQuestion();
+
+    }
+
+});
