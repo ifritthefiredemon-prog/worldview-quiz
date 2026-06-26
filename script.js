@@ -1,6 +1,9 @@
-// ==========================
-// ELEMENTS
-// ==========================
+// ======================================
+// THE WORLDVIEW COMPASS
+// Main Script
+// ======================================
+
+// ---------- ELEMENTS ----------
 
 const openButton = document.getElementById("openAssessment");
 const modal = document.getElementById("assessmentModal");
@@ -16,27 +19,24 @@ const questionCounter = document.getElementById("questionCounter");
 const questionText = document.getElementById("questionText");
 const quizProgressFill = document.getElementById("quizProgressFill");
 
-// ==========================
-// QUIZ VARIABLES
-// ==========================
+const hero = document.querySelector(".hero");
+const nav = document.querySelector("nav");
+
+// ---------- VARIABLES ----------
 
 let currentQuestion = 0;
 
-// ==========================
-// OPEN MODAL
-// ==========================
+// ---------- OPEN MODAL ----------
 
-openButton.onclick = function () {
+openButton.addEventListener("click", () => {
 
     modal.classList.add("show");
 
-};
+});
 
-// ==========================
-// CLOSE MODAL
-// ==========================
+// ---------- CLOSE MODAL ----------
 
-modal.onclick = function (e) {
+modal.addEventListener("click", (e) => {
 
     if (e.target === modal) {
 
@@ -44,13 +44,11 @@ modal.onclick = function (e) {
 
     }
 
-};
+});
 
-// ==========================
-// BEGIN JOURNEY
-// ==========================
+// ---------- BEGIN QUIZ ----------
 
-startButton.onclick = function () {
+startButton.addEventListener("click", () => {
 
     modal.classList.remove("show");
 
@@ -58,11 +56,9 @@ startButton.onclick = function () {
 
     startLoading();
 
-};
+});
 
-// ==========================
-// LOADING
-// ==========================
+// ---------- LOADING ----------
 
 function startLoading() {
 
@@ -71,16 +67,13 @@ function startLoading() {
     const messages = [
 
         "Calibrating your Worldview Compass...",
-
         "Preparing questions...",
-
         "Analyzing worldview dimensions...",
-
         "Almost Ready..."
 
     ];
 
-    loadingText.innerText = messages[0];
+    loadingText.textContent = messages[0];
 
     const timer = setInterval(() => {
 
@@ -88,14 +81,14 @@ function startLoading() {
 
         progressFill.style.width = progress + "%";
 
-        if (progress == 25)
-            loadingText.innerText = messages[1];
+        if (progress === 25)
+            loadingText.textContent = messages[1];
 
-        if (progress == 50)
-            loadingText.innerText = messages[2];
+        if (progress === 50)
+            loadingText.textContent = messages[2];
 
-        if (progress == 80)
-            loadingText.innerText = messages[3];
+        if (progress === 80)
+            loadingText.textContent = messages[3];
 
         if (progress >= 100) {
 
@@ -103,28 +96,39 @@ function startLoading() {
 
             loadingScreen.classList.remove("show");
 
+            // Hide landing page
+            hero.style.display = "none";
+            nav.style.display = "none";
+
+            // Show quiz
             quizScreen.classList.add("show");
 
             loadQuestion();
 
         }
 
-    }, 25);
+    }, 20);
 
 }
 
-// ==========================
-// LOAD QUESTION
-// ==========================
+// ---------- LOAD QUESTION ----------
 
 function loadQuestion() {
 
+    if (typeof questions === "undefined") {
+
+        alert("questions.js failed to load.");
+
+        return;
+
+    }
+
     const question = questions[currentQuestion];
 
-    questionCounter.innerText =
+    questionCounter.textContent =
         `Question ${currentQuestion + 1} of ${questions.length}`;
 
-    questionText.innerText = question.statement;
+    questionText.textContent = question.statement;
 
     const progress =
         ((currentQuestion + 1) / questions.length) * 100;
