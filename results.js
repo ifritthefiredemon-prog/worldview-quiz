@@ -110,9 +110,9 @@ window.onload = () => {
     document.getElementById("primaryName").textContent=
         results[0].name;
 
-    document.getElementById("primaryDescription").textContent=
-        philosophyDescriptions[results[0].name] ||
-        "Description coming soon.";
+    document.getElementById("meaningText").textContent =
+    philosophyMeanings[results[0].name] ||
+    "More information about this philosophy will be available soon.";
 
     // Top Three
 
