@@ -21,8 +21,11 @@
 <nav>
 
     <div class="logo-container">
-    <img src="images/logo.png" class="logo" alt="Worldview Compass Logo">
-    <h2>Worldview Compass</h2>
+
+        <img src="images/logo.png" class="logo" alt="Worldview Compass Logo">
+
+        <h2>Worldview Compass</h2>
+
     </div>
 
     <div class="nav-links">
@@ -57,15 +60,16 @@
 
     <div class="hero-right">
 
-        <img src="images/hero.png"
-             alt="Worldview Compass"
-             class="hero-image">
+        <img
+            src="images/hero.png"
+            alt="Worldview Compass"
+            class="hero-image">
 
     </div>
 
 </section>
 
-<!-- ================= ASSESSMENT MODAL ================= -->
+<!-- ================= MODAL ================= -->
 
 <div id="assessmentModal" class="modal">
 
@@ -74,19 +78,14 @@
         <h2>Welcome!</h2>
 
         <p>
-
             There are no right or wrong answers.
-
             Respond honestly based on what you genuinely believe.
-
         </p>
 
         <div class="input-group">
 
             <label>
-
                 What should we call you? (Optional)
-
             </label>
 
             <input
@@ -99,21 +98,15 @@
         <div class="input-group">
 
             <label>
-
                 How familiar are you with philosophy or worldviews?
-
             </label>
 
             <select id="knowledge">
 
                 <option>I've never studied philosophy</option>
-
                 <option>I know a little</option>
-
                 <option>I know several philosophical ideas</option>
-
                 <option>I regularly study philosophy</option>
-
                 <option>I have an advanced understanding</option>
 
             </select>
@@ -125,9 +118,7 @@
             <input type="checkbox" id="agree">
 
             <label for="agree">
-
                 I agree to anonymously contribute my responses to improve The Worldview Compass.
-
             </label>
 
         </div>
@@ -139,11 +130,8 @@
             <ul>
 
                 <li>40 thought-provoking statements</li>
-
                 <li>Approximately 8–12 minutes</li>
-
                 <li>There are no right or wrong answers</li>
-
                 <li>Answer honestly based on your beliefs</li>
 
             </ul>
@@ -151,22 +139,23 @@
         </div>
 
         <button id="startQuiz">
-    Begin Journey →
+            Begin Journey →
         </button>
 
     </div>
 
 </div>
 
-<!-- ================= LOADING SCREEN ================= -->
+<!-- ================= LOADING ================= -->
 
 <div id="loadingScreen">
 
     <div class="loader">
 
-        <img src="images/logo.png"
-             class="loading-logo"
-             alt="Loading">
+        <img
+            src="images/logo.png"
+            class="loading-logo"
+            alt="Loading">
 
         <h2>Preparing Your Assessment</h2>
 
@@ -175,31 +164,32 @@
         </p>
 
         <div class="progressBar">
+
             <div id="progressFill"></div>
+
         </div>
 
     </div>
 
 </div>
-<!-- ================= QUIZ SCREEN ================= -->
+
+<!-- ================= QUIZ ================= -->
 
 <div id="quizScreen" class="quiz-screen">
 
     <div class="quiz-container">
 
-        <h2>🧭 Worldview Compass</h2>
+        <h2 class="quiz-title">
+            🧭 Worldview Compass
+        </h2>
 
-        <div class="question-header">
+        <p id="questionCounter">
+            Question 1 of 40
+        </p>
 
-            <p id="questionCounter">
-                Question 1 of 40
-            </p>
+        <div class="quizProgressBar">
 
-            <div class="quizProgressBar">
-
-                <div id="quizProgressFill"></div>
-
-            </div>
+            <div id="quizProgressFill"></div>
 
         </div>
 
@@ -207,21 +197,54 @@
             Question goes here...
         </h3>
 
-        <div class="answers">
+        <div class="likert-scale">
 
-            <label><input type="radio" name="answer" value="1"> Strongly Disagree</label>
+            <span class="scale-label">
+                Strongly<br>Disagree
+            </span>
 
-            <label><input type="radio" name="answer" value="2"> Disagree</label>
+            <div class="scale-options">
 
-            <label><input type="radio" name="answer" value="3"> Somewhat Disagree</label>
+                <label>
+                    <input type="radio" name="answer" value="1">
+                    <span></span>
+                </label>
 
-            <label><input type="radio" name="answer" value="4"> Neutral</label>
+                <label>
+                    <input type="radio" name="answer" value="2">
+                    <span></span>
+                </label>
 
-            <label><input type="radio" name="answer" value="5"> Somewhat Agree</label>
+                <label>
+                    <input type="radio" name="answer" value="3">
+                    <span></span>
+                </label>
 
-            <label><input type="radio" name="answer" value="6"> Agree</label>
+                <label>
+                    <input type="radio" name="answer" value="4">
+                    <span></span>
+                </label>
 
-            <label><input type="radio" name="answer" value="7"> Strongly Agree</label>
+                <label>
+                    <input type="radio" name="answer" value="5">
+                    <span></span>
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="6">
+                    <span></span>
+                </label>
+
+                <label>
+                    <input type="radio" name="answer" value="7">
+                    <span></span>
+                </label>
+
+            </div>
+
+            <span class="scale-label">
+                Strongly<br>Agree
+            </span>
 
         </div>
 
@@ -240,9 +263,11 @@
     </div>
 
 </div>
+
+<!-- ================= JAVASCRIPT ================= -->
+
 <script src="questions.js"></script>
 <script src="script.js"></script>
 
 </body>
-
-</html>
+                    </html>
