@@ -1,7 +1,11 @@
 // ======================================
 // THE WORLDVIEW COMPASS
-// Results Page v2
+// Results Page v3
 // ======================================
+
+// --------------------------------------
+// Short Descriptions
+// --------------------------------------
 
 const philosophyDescriptions = {
 
@@ -38,89 +42,93 @@ const philosophyDescriptions = {
     "Absurdism":"You embrace life even without absolute meaning.",
 
     "Nihilism":"You question whether objective meaning truly exists."
+
 };
+
+// --------------------------------------
+// Detailed Meaning
+// --------------------------------------
+
 const philosophyMeanings = {
 
-    "Humanism":
-        "You generally believe that people are capable of improving themselves and society through reason, compassion, and cooperation. You tend to value human dignity and ethical responsibility over rigid authority.",
+    "Humanism":"You generally believe people are capable of improving themselves and society through reason, compassion, and cooperation. Human dignity and ethical responsibility are central to your worldview.",
 
-    "Existentialism":
-        "You believe life gains meaning through the choices you make. Rather than expecting purpose to be given, you accept responsibility for creating your own direction.",
+    "Existentialism":"You believe meaning is created through your own choices. Rather than waiting for life to provide purpose, you accept responsibility for creating it yourself.",
 
-    "Stoicism":
-        "You focus on maintaining self-control, emotional resilience, and inner peace. You try to devote your energy to what you can control while accepting what you cannot.",
+    "Stoicism":"You strive to remain calm under pressure, focusing on what you can control while accepting what you cannot. Discipline and resilience guide your decisions.",
 
-    "Confucianism":
-        "You place great importance on moral character, respect, family, and social harmony. You believe a stable society begins with responsible individuals.",
+    "Confucianism":"You believe strong moral character, respect, family, and social harmony create a healthy society. Personal responsibility begins with how we treat others.",
 
-    "Naturalism":
-        "You understand reality primarily through nature and scientific inquiry. Evidence and observable facts guide how you interpret the world.",
+    "Naturalism":"You understand reality primarily through nature and science. Evidence and observation shape how you evaluate ideas and beliefs.",
 
-    "Theism":
-        "You believe a divine being or higher power plays an important role in existence and may provide purpose, morality, and guidance.",
+    "Theism":"You believe a higher power or divine being provides purpose, moral guidance, and meaning within the universe.",
 
-    "Pantheism":
-        "You see the universe, nature, and the divine as deeply interconnected. Spirituality is often found within the natural world itself.",
+    "Pantheism":"You view nature, the universe, and the divine as deeply connected, often finding spirituality within the natural world itself.",
 
-    "Agnosticism":
-        "You remain open-minded about ultimate questions. Rather than claiming certainty, you recognize the limits of human knowledge.",
+    "Agnosticism":"You recognize that some questions may never have definite answers. Rather than claiming certainty, you remain intellectually open-minded.",
 
-    "Pragmatism":
-        "You evaluate ideas by their practical results. If something consistently works in real life, you see value in it regardless of abstract theories.",
+    "Pragmatism":"You judge ideas by their practical usefulness. If something consistently produces good results, you see value in applying it.",
 
-    "Empiricism":
-        "You trust observation, experimentation, and evidence as the strongest foundations for knowledge and understanding.",
+    "Empiricism":"You believe knowledge should come from evidence, observation, experimentation, and real-world experience.",
 
-    "Rationalism":
-        "You naturally rely on logic, critical thinking, and careful reasoning when making decisions. You prefer evidence-supported conclusions over assumptions and enjoy examining ideas from multiple perspectives.",
+    "Rationalism":"You naturally rely on logic, careful reasoning, and critical thinking. You prefer evidence-supported conclusions and enjoy examining different perspectives before making decisions.",
 
-    "Idealism":
-        "You believe ideas, values, and consciousness play a central role in understanding reality, often placing importance on principles over material concerns.",
+    "Idealism":"You believe ideas, values, and consciousness are fundamental to understanding reality, often placing principles above material concerns.",
 
-    "Utilitarianism":
-        "You often evaluate decisions based on their consequences and believe the best actions are those that produce the greatest overall benefit.",
+    "Utilitarianism":"You evaluate actions by their consequences and generally believe the best decisions produce the greatest benefit for the greatest number of people.",
 
-    "Secular Humanism":
-        "You believe ethical living, meaning, and purpose can be achieved through human reason and compassion without depending on religious belief.",
+    "Secular Humanism":"You believe people can build meaningful, ethical, and fulfilling lives through reason, compassion, and shared human values without depending on religion.",
 
-    "Deism":
-        "You believe a creator exists but generally allows the universe to operate according to natural laws without ongoing intervention.",
+    "Deism":"You believe a creator exists but allows the universe to function according to natural laws without regular supernatural intervention.",
 
-    "Absurdism":
-        "You recognize that life may not provide absolute meaning, yet you believe people can still live fully, find joy, and embrace the human experience.",
+    "Absurdism":"You recognize that life may lack absolute meaning, yet you choose to embrace life fully and create value through your own experiences.",
 
-    "Nihilism":
-        "You question whether objective meaning or universal purpose truly exists, encouraging deep examination of beliefs and assumptions."
+    "Nihilism":"You question whether objective meaning or universal purpose truly exists, encouraging deep examination of assumptions and beliefs."
 
 };
-window.onload = () => {
+
+// --------------------------------------
+// Load Results
+// --------------------------------------
+
+window.onload = function () {
 
     const results = JSON.parse(localStorage.getItem("worldviewScores"));
 
-    if(!results){
+    if (!results || results.length === 0) {
 
-        document.body.innerHTML="<h2>No Results Found</h2>";
+        document.body.innerHTML =
+            "<h2 style='text-align:center;margin-top:100px;'>No Results Found.</h2>";
 
         return;
-
     }
 
-    // Main philosophy
+    // --------------------------
+    // Primary Philosophy
+    // --------------------------
 
-    document.getElementById("primaryName").textContent=
+    document.getElementById("primaryName").textContent =
         results[0].name;
 
+    document.getElementById("primaryDescription").textContent =
+        philosophyDescriptions[results[0].name] ||
+        "Description coming soon.";
+
     document.getElementById("meaningText").textContent =
-    philosophyMeanings[results[0].name] ||
-    "More information about this philosophy will be available soon.";
+        philosophyMeanings[results[0].name] ||
+        "More information about this philosophy will be available soon.";
 
+    // --------------------------
     // Top Three
+    // --------------------------
 
-    const topThree=document.getElementById("topThree");
+    const topThree = document.getElementById("topThree");
+
+    topThree.innerHTML = "";
 
     results.slice(0,3).forEach((item,index)=>{
 
-        topThree.innerHTML+=`
+        topThree.innerHTML += `
 
         <div class="result-card">
 
@@ -136,13 +144,17 @@ window.onload = () => {
 
     });
 
-    // Score bars
+    // --------------------------
+    // Score Bars
+    // --------------------------
 
-    const scoreList=document.getElementById("scoreList");
+    const scoreList = document.getElementById("scoreList");
+
+    scoreList.innerHTML = "";
 
     results.forEach(item=>{
 
-        scoreList.innerHTML+=`
+        scoreList.innerHTML += `
 
         <div class="score-item">
 
@@ -168,77 +180,94 @@ window.onload = () => {
 
     });
 
+    // --------------------------
     // Radar Chart
+    // --------------------------
 
-    const ctx=document
+    const ctx = document
         .getElementById("radarChart")
         .getContext("2d");
 
-    new Chart(ctx,{
+    new Chart(ctx, {
 
-        type:"radar",
+        type: "radar",
 
-        data:{
+        data: {
 
-            labels:results.slice(0,8).map(r=>r.name),
+            labels: results.slice(0,8).map(r => r.name),
 
-            datasets:[{
+            datasets: [{
 
-                label:"Worldview Profile",
+                data: results.slice(0,8).map(r => r.percentage),
 
-                data:results.slice(0,8).map(r=>r.percentage),
+                backgroundColor: "rgba(22,196,255,.25)",
 
-                fill:true,
+                borderColor: "#16c4ff",
 
-                backgroundColor:"rgba(22,196,255,.25)",
+                borderWidth: 3,
 
-                borderColor:"#16c4ff",
+                pointBackgroundColor: "#16c4ff",
 
-                borderWidth:3,
+                pointRadius: 4,
 
-                pointBackgroundColor:"#16c4ff"
+                fill: true
 
             }]
 
         },
 
-        options:{
+        options: {
 
-            responsive:true,
+            responsive: true,
 
-            plugins:{
+            maintainAspectRatio: true,
 
-                legend:{
-                    display:false
+            plugins: {
+
+                legend: {
+
+                    display: false
+
                 }
 
             },
 
-            scales:{
+            scales: {
 
-                r:{
+                r: {
 
-                    suggestedMin:0,
+                    min: 0,
 
-                    suggestedMax:100,
+                    max: 100,
 
-                    ticks:{
-                        display:false
+                    ticks: {
+
+                        display: false
+
                     },
 
-                    grid:{
-                        color:"rgba(255,255,255,.15)"
+                    grid: {
+
+                        color: "rgba(255,255,255,.15)"
+
                     },
 
-                    angleLines:{
-                        color:"rgba(255,255,255,.15)"
+                    angleLines: {
+
+                        color: "rgba(255,255,255,.15)"
+
                     },
 
-                    pointLabels:{
-                        color:"#fff",
-                        font:{
-                            size:12
+                    pointLabels: {
+
+                        color: "#ffffff",
+
+                        font: {
+
+                            size: 12
+
                         }
+
                     }
 
                 }
