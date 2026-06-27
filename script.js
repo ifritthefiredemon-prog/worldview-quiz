@@ -30,7 +30,8 @@ const answerInputs = document.querySelectorAll('input[name="answer"]');
 // ---------- VARIABLES ----------
 
 let currentQuestion = 0;
-let answers = new Array(window.questions.length).fill(null);
+
+let answers = new Array(questions.length).fill(null);
 
 // ---------- OPEN MODAL ----------
 
