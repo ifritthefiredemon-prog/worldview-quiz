@@ -446,7 +446,9 @@ const philosophyData = {
 // =======================================================
 
 window.onload = function () {
-
+const nickname =
+    localStorage.getItem("worldviewNickname") ||
+    "Explorer";
     // ----------------------------------
     // Load saved results
     // ----------------------------------
