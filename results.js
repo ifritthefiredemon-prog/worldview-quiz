@@ -272,6 +272,30 @@ const philosophyData = {
 
     },
 
+    "Realism":{
+
+    description:
+        "You believe reality exists independently of our thoughts, perceptions, or beliefs.",
+
+    meaning:
+        "You generally believe that the world exists objectively whether people observe it or not. Truth is discovered rather than created, and reality remains the same regardless of individual opinions.",
+
+    strengths:[
+        "Values objective truth and factual accuracy.",
+        "Makes decisions based on evidence rather than personal preference.",
+        "Remains grounded in practical reality.",
+        "Recognizes the difference between beliefs and facts."
+    ],
+
+    blindSpots:[
+        "May underestimate how perspective influences understanding.",
+        "Can overlook emotional or subjective experiences.",
+        "May appear overly rigid in debates.",
+        "Sometimes prioritizes facts over empathy."
+    ]
+
+},
+
     "Idealism":{
 
         description:
