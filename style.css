@@ -403,80 +403,55 @@ button:hover{
 }
 
 /* ===========================
-   NEW LIKERT SCALE
+/* ===========================
+   LIKERT SCALE
 =========================== */
 
+.answers{
+    margin:35px 0;
+}
+
+.scale-labels{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:18px;
+    color:#d1d5db;
+    font-size:15px;
+    font-weight:600;
+}
+
 .likert-scale{
-
     display:flex;
-
+    justify-content:space-between;
     align-items:center;
-
-    justify-content:space-between;
-
-    gap:15px;
-
-    margin:40px 0;
-
+    gap:10px;
 }
 
-.scale-label{
-
-    width:110px;
-
-    text-align:center;
-
-    font-size:.9rem;
-
-    color:#bbb;
-
-}
-
-.scale-options{
-
-    flex:1;
-
-    display:flex;
-
-    justify-content:space-between;
-
-}
-
-.scale-options label{
-
+.likert-scale label{
     cursor:pointer;
-
 }
 
-.scale-options input{
-
+.likert-scale input{
     display:none;
-
 }
 
-.scale-options span{
-
-    display:block;
-
+.circle{
     width:28px;
     height:28px;
-
+    border:3px solid #bfc6d4;
     border-radius:50%;
-
-    border:3px solid #888;
-
-    transition:.2s;
-
+    display:block;
+    transition:.25s;
 }
 
-.scale-options input:checked + span{
+.likert-scale input:checked + .circle{
+    background:#0ea5ff;
+    border-color:#0ea5ff;
+    box-shadow:0 0 12px rgba(14,165,255,.7);
+}
 
-    background:#2196F3;
-
-    border-color:#2196F3;
-
-    transform:scale(1.2);
-
+.likert-scale label:hover .circle{
+    border-color:#38bdf8;
 }
 
 /* ===========================
