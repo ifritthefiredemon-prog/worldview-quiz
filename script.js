@@ -25,12 +25,9 @@ const quizProgressFill = document.getElementById("quizProgressFill");
 const nextButton = document.getElementById("nextQuestion");
 const prevButton = document.getElementById("prevQuestion");
 
-const answerInputs = document.querySelectorAll('input[name="answer"]');
-
 // ---------- VARIABLES ----------
 
 let currentQuestion = 0;
-
 let answers = new Array(questions.length).fill(null);
 
 // ---------- OPEN MODAL ----------
@@ -76,22 +73,37 @@ function startLoading() {
 
         progressFill.style.width = progress + "%";
 
-        if(progress===25) loadingText.textContent=messages[1];
-        if(progress===50) loadingText.textContent=messages[2];
-        if(progress===80) loadingText.textContent=messages[3];
+        if (progress === 25)
+            loadingText.textContent = messages[1];
 
-        if(progress>=100){
+        if (progress === 50)
+            loadingText.textContent = messages[2];
+
+        if (progress === 80)
+            loadingText.textContent = messages[3];
+
+        if (progress >= 100) {
 
             clearInterval(timer);
 
             loadingScreen.classList.remove("show");
 
-            hero.style.display="none";
-            nav.style.display="none";
+            hero.style.display = "none";
+            nav.style.display = "none";
 
             quizScreen.classList.add("show");
 
-            function loadQuestion() {
+            loadQuestion();
+
+        }
+
+    }, 20);
+
+}
+
+// ---------- LOAD QUESTION ----------
+
+function loadQuestion() {
 
     const question = questions[currentQuestion];
 
@@ -103,11 +115,12 @@ function startLoading() {
     quizProgressFill.style.width =
         ((currentQuestion + 1) / questions.length) * 100 + "%";
 
-    // Restore previously selected answer
-    document
-        .querySelectorAll('input[name="answer"]')
-        .forEach(radio => radio.checked = false);
+    // Clear radio buttons
+    document.querySelectorAll('input[name="answer"]').forEach(radio => {
+        radio.checked = false;
+    });
 
+    // Restore saved answer
     if (answers[currentQuestion] !== null) {
 
         const saved = document.querySelector(
@@ -120,17 +133,62 @@ function startLoading() {
 
     }
 
-    // Update button text
+    // Update buttons
+    prevButton.disabled = currentQuestion === 0;
+
     if (currentQuestion === questions.length - 1) {
         nextButton.textContent = "Finish";
     } else {
         nextButton.textContent = "Next →";
     }
 
-    prevButton.disabled = currentQuestion === 0;
-
-            }
-
-    },20);
-
 }
+
+// ---------- NEXT ----------
+
+nextButton.addEventListener("click", () => {
+
+    const selected =
+        document.querySelector('input[name="answer"]:checked');
+
+    if (!selected) {
+        alert("Please select an answer.");
+        return;
+    }
+
+    answers[currentQuestion] = Number(selected.value);
+
+    if (currentQuestion === questions.length - 1) {
+
+        alert("Quiz Complete! (Results coming next)");
+
+        console.log(answers);
+
+        return;
+
+    }
+
+    currentQuestion++;
+
+    loadQuestion();
+
+});
+
+// ---------- PREVIOUS ----------
+
+prevButton.addEventListener("click", () => {
+
+    if (currentQuestion === 0) return;
+
+    const selected =
+        document.querySelector('input[name="answer"]:checked');
+
+    if (selected) {
+        answers[currentQuestion] = Number(selected.value);
+    }
+
+    currentQuestion--;
+
+    loadQuestion();
+
+});
