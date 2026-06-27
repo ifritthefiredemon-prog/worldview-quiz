@@ -20,40 +20,24 @@
 
     <div class="results-container">
 
+        <!-- HEADER -->
+
         <header class="results-header">
 
-            <img src="images/logo.png" class="results-logo" alt="Worldview Compass">
+            <img src="images/logo.png"
+                 class="results-logo"
+                 alt="Worldview Compass">
 
             <h1>Your Worldview Compass</h1>
 
             <p class="results-subtitle">
                 Your assessment has been completed successfully.
-                Below is a personalized analysis of your philosophical worldview.
+                Below is your personalized philosophical profile.
             </p>
 
         </header>
-<!-- Strengths & Blind Spots -->
 
-<div class="analysis-grid">
-
-    <div class="analysis-card">
-
-        <h2>Strengths</h2>
-
-        <ul id="strengthList"></ul>
-
-    </div>
-
-    <div class="analysis-card">
-
-        <h2>Potential Blind Spots</h2>
-
-        <ul id="blindSpotList"></ul>
-
-    </div>
-
-</div>
-        <!-- Primary Philosophy -->
+        <!-- PRIMARY PHILOSOPHY -->
 
         <section class="primary-card">
 
@@ -70,18 +54,42 @@
             </p>
 
         </section>
-<!-- Meaning Section -->
 
-<div class="meaning-card">
+        <!-- WHAT THIS MEANS -->
 
-    <h2>What This Means</h2>
+        <section class="meaning-card">
 
-    <p id="meaningText">
-        Loading...
-    </p>
+            <h2>What This Means</h2>
 
-</div>
-        <!-- Top Philosophies -->
+            <p id="meaningText">
+                Loading...
+            </p>
+
+        </section>
+
+        <!-- STRENGTHS & BLIND SPOTS -->
+
+        <section class="analysis-grid">
+
+            <div class="analysis-card">
+
+                <h2>Strengths</h2>
+
+                <ul id="strengthList"></ul>
+
+            </div>
+
+            <div class="analysis-card">
+
+                <h2>Potential Blind Spots</h2>
+
+                <ul id="blindSpotList"></ul>
+
+            </div>
+
+        </section>
+
+        <!-- TOP THREE -->
 
         <section>
 
@@ -95,12 +103,12 @@
 
         </section>
 
-        <!-- Radar Chart -->
+        <!-- RADAR CHART -->
 
         <section>
 
             <h2 class="section-title">
-                Worldview Profile
+                Your Worldview Profile
             </h2>
 
             <div class="chart-card">
@@ -111,7 +119,7 @@
 
         </section>
 
-        <!-- All Scores -->
+        <!-- ALL SCORES -->
 
         <section>
 
@@ -125,14 +133,23 @@
 
         </section>
 
-        <!-- Buttons -->
+        <!-- FUTURE FEATURES -->
+
+        <!--
+        Compatibility
+        Famous Thinkers
+        Historical Figures
+        Recommended Books
+        Suggested Careers
+        Philosophy Timeline
+        -->
+
+        <!-- BUTTONS -->
 
         <div class="results-buttons">
 
             <button onclick="location.href='index.html'">
-
                 Take Assessment Again
-
             </button>
 
         </div>
@@ -144,5 +161,4 @@
 <script src="results.js"></script>
 
 </body>
-
 </html>
