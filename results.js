@@ -65,7 +65,7 @@ const philosophyDescriptions = {
 window.onload = function () {
 
     const results =
-        JSON.parse(localStorage.getItem("worldviewResults"));
+    JSON.parse(localStorage.getItem("worldviewScores"));
 
     if (!results || results.length === 0) {
 
