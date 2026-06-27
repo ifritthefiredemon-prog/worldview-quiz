@@ -39,7 +39,60 @@ const philosophyDescriptions = {
 
     "Nihilism":"You question whether objective meaning truly exists."
 };
+const philosophyMeanings = {
 
+    "Humanism":
+        "You generally believe that people are capable of improving themselves and society through reason, compassion, and cooperation. You tend to value human dignity and ethical responsibility over rigid authority.",
+
+    "Existentialism":
+        "You believe life gains meaning through the choices you make. Rather than expecting purpose to be given, you accept responsibility for creating your own direction.",
+
+    "Stoicism":
+        "You focus on maintaining self-control, emotional resilience, and inner peace. You try to devote your energy to what you can control while accepting what you cannot.",
+
+    "Confucianism":
+        "You place great importance on moral character, respect, family, and social harmony. You believe a stable society begins with responsible individuals.",
+
+    "Naturalism":
+        "You understand reality primarily through nature and scientific inquiry. Evidence and observable facts guide how you interpret the world.",
+
+    "Theism":
+        "You believe a divine being or higher power plays an important role in existence and may provide purpose, morality, and guidance.",
+
+    "Pantheism":
+        "You see the universe, nature, and the divine as deeply interconnected. Spirituality is often found within the natural world itself.",
+
+    "Agnosticism":
+        "You remain open-minded about ultimate questions. Rather than claiming certainty, you recognize the limits of human knowledge.",
+
+    "Pragmatism":
+        "You evaluate ideas by their practical results. If something consistently works in real life, you see value in it regardless of abstract theories.",
+
+    "Empiricism":
+        "You trust observation, experimentation, and evidence as the strongest foundations for knowledge and understanding.",
+
+    "Rationalism":
+        "You naturally rely on logic, critical thinking, and careful reasoning when making decisions. You prefer evidence-supported conclusions over assumptions and enjoy examining ideas from multiple perspectives.",
+
+    "Idealism":
+        "You believe ideas, values, and consciousness play a central role in understanding reality, often placing importance on principles over material concerns.",
+
+    "Utilitarianism":
+        "You often evaluate decisions based on their consequences and believe the best actions are those that produce the greatest overall benefit.",
+
+    "Secular Humanism":
+        "You believe ethical living, meaning, and purpose can be achieved through human reason and compassion without depending on religious belief.",
+
+    "Deism":
+        "You believe a creator exists but generally allows the universe to operate according to natural laws without ongoing intervention.",
+
+    "Absurdism":
+        "You recognize that life may not provide absolute meaning, yet you believe people can still live fully, find joy, and embrace the human experience.",
+
+    "Nihilism":
+        "You question whether objective meaning or universal purpose truly exists, encouraging deep examination of beliefs and assumptions."
+
+};
 window.onload = () => {
 
     const results = JSON.parse(localStorage.getItem("worldviewScores"));
