@@ -471,23 +471,25 @@ button{
 .answers{
     display:flex;
     flex-direction:column;
-    gap:10px;
+    gap:12px;
 }
 
 .answer-card{
     display:flex;
     align-items:center;
     gap:14px;
-    padding:14px 16px;
+    width:100%;
+    padding:16px;
     background:#1f2937;
     border-radius:14px;
-    border:2px solid transparent;
+    border:2px solid #1f2937;
     cursor:pointer;
     transition:.25s;
 }
 
 .answer-card:hover{
-    background:#2b3648;
+    background:#293548;
+    border-color:#16c4ff;
 }
 
 .answer-card input{
@@ -498,15 +500,11 @@ button{
 }
 
 .answer-card span{
+    flex:1;
     font-size:1rem;
+    color:#fff;
     line-height:1.4;
 }
-
-.answer-card:has(input:checked){
-    background:#1d4364;
-    border-color:#16c4ff;
-}
-
 /* =====================================
    BUTTONS
 ===================================== */
