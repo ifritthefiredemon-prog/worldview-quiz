@@ -34,18 +34,26 @@ function calculateScores(questions, answers) {
 
     });
 
-    // Highest score earned
-    const maxScore = Math.max(...Object.values(scores));
+    // Count how many questions each philosophy appears in
+const counts = {};
 
-    // Convert to sorted array
-    const results = Object.entries(scores)
-        .map(([name, score]) => ({
-            name,
-            score,
-            percentage: Math.round((score / maxScore) * 100)
-        }))
-        .sort((a, b) => b.score - a.score);
+questions.forEach(question => {
+    question.measures.forEach(philosophy => {
+        counts[philosophy] = (counts[philosophy] || 0) + 1;
+    });
+});
 
-    return results;
+// Convert to percentages based on the maximum possible score
+const results = Object.entries(scores)
+    .map(([name, score]) => ({
+        name,
+        score,
+        percentage: Math.round(
+            (score / (counts[name] * 7)) * 100
+        )
+    }))
+    .sort((a, b) => b.percentage - a.percentage);
+
+return results;
 
 }
