@@ -623,3 +623,117 @@ button{
 }
 
    }
+/* =====================================
+   RESULTS PAGE
+===================================== */
+
+.results-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+    background:radial-gradient(circle at top,#1d3d73,#0b1220 70%);
+}
+
+.results-container{
+    width:100%;
+    max-width:900px;
+    background:#111827;
+    border-radius:24px;
+    padding:40px;
+    border:1px solid rgba(255,255,255,.08);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.results-container h1{
+    text-align:center;
+    font-size:2.5rem;
+    margin-bottom:12px;
+}
+
+.results-subtitle{
+    text-align:center;
+    color:#cbd5e1;
+    margin-bottom:35px;
+    line-height:1.6;
+}
+
+.primary-card{
+    background:linear-gradient(135deg,#0078ff,#14c9ff);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.primary-card h2{
+    font-size:2rem;
+    margin-bottom:12px;
+}
+
+.primary-card p{
+    line-height:1.7;
+}
+
+.section-title{
+    margin:30px 0 18px;
+}
+
+.result-card{
+    background:#1f2937;
+    padding:18px;
+    border-radius:14px;
+    margin-bottom:12px;
+}
+
+.score-item{
+    margin-bottom:18px;
+}
+
+.score-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:8px;
+    font-weight:bold;
+}
+
+.score-bar{
+    width:100%;
+    height:12px;
+    background:#293241;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.score-fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#16c4ff,#0078ff);
+    transition:width 1s ease;
+}
+
+.results-buttons{
+    margin-top:35px;
+    text-align:center;
+}
+
+.results-buttons button{
+    margin-top:0;
+}
+
+@media(max-width:768px){
+
+.results-container{
+    padding:24px;
+}
+
+.results-container h1{
+    font-size:2rem;
+}
+
+.primary-card h2{
+    font-size:1.6rem;
+}
+
+}
