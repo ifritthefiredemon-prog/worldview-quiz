@@ -3,93 +3,19 @@
 // Results Page v3
 // ======================================
 
-// --------------------------------------
-// Short Descriptions
-// --------------------------------------
+// =======================================================
+// PHILOSOPHY DATABASE
+// =======================================================
 
-const philosophyDescriptions = {
-
-    "Humanism":"You value human dignity, compassion, reason, and helping people flourish together.",
-
-    "Existentialism":"You believe meaning is created through personal choice and responsibility.",
-
-    "Stoicism":"You believe wisdom comes from mastering yourself rather than controlling the world.",
-
-    "Confucianism":"You value harmony, respect, family, and moral responsibility.",
-
-    "Naturalism":"You trust scientific explanations and the natural world.",
-
-    "Theism":"You believe a divine reality plays an important role in existence.",
-
-    "Pantheism":"You see the universe and the divine as deeply interconnected.",
-
-    "Agnosticism":"You remain open-minded about questions that cannot be answered with certainty.",
-
-    "Pragmatism":"You judge ideas by how well they work in practice.",
-
-    "Empiricism":"You trust observation, evidence, and experience.",
-
-    "Rationalism":"You value logic and reason above all else.",
-
-    "Idealism":"You believe ideas and consciousness are central to reality.",
-
-    "Utilitarianism":"You believe the best actions produce the greatest good for the greatest number.",
-
-    "Secular Humanism":"You believe people can live meaningful and ethical lives without religion.",
-
-    "Deism":"You believe a creator exists but rarely intervenes.",
-
-    "Absurdism":"You embrace life even without absolute meaning.",
-
-    "Nihilism":"You question whether objective meaning truly exists."
-
-};
-
-// --------------------------------------
-// Detailed Meaning
-// --------------------------------------
-
-const philosophyMeanings = {
-
-    "Humanism":"You generally believe people are capable of improving themselves and society through reason, compassion, and cooperation. Human dignity and ethical responsibility are central to your worldview.",
-
-    "Existentialism":"You believe meaning is created through your own choices. Rather than waiting for life to provide purpose, you accept responsibility for creating it yourself.",
-
-    "Stoicism":"You strive to remain calm under pressure, focusing on what you can control while accepting what you cannot. Discipline and resilience guide your decisions.",
-
-    "Confucianism":"You believe strong moral character, respect, family, and social harmony create a healthy society. Personal responsibility begins with how we treat others.",
-
-    "Naturalism":"You understand reality primarily through nature and science. Evidence and observation shape how you evaluate ideas and beliefs.",
-
-    "Theism":"You believe a higher power or divine being provides purpose, moral guidance, and meaning within the universe.",
-
-    "Pantheism":"You view nature, the universe, and the divine as deeply connected, often finding spirituality within the natural world itself.",
-
-    "Agnosticism":"You recognize that some questions may never have definite answers. Rather than claiming certainty, you remain intellectually open-minded.",
-
-    "Pragmatism":"You judge ideas by their practical usefulness. If something consistently produces good results, you see value in applying it.",
-
-    "Empiricism":"You believe knowledge should come from evidence, observation, experimentation, and real-world experience.",
-
-    "Rationalism":"You naturally rely on logic, careful reasoning, and critical thinking. You prefer evidence-supported conclusions and enjoy examining different perspectives before making decisions.",
-
-    "Idealism":"You believe ideas, values, and consciousness are fundamental to understanding reality, often placing principles above material concerns.",
-
-    "Utilitarianism":"You evaluate actions by their consequences and generally believe the best decisions produce the greatest benefit for the greatest number of people.",
-
-    "Secular Humanism":"You believe people can build meaningful, ethical, and fulfilling lives through reason, compassion, and shared human values without depending on religion.",
-
-    "Deism":"You believe a creator exists but allows the universe to function according to natural laws without regular supernatural intervention.",
-
-    "Absurdism":"You recognize that life may lack absolute meaning, yet you choose to embrace life fully and create value through your own experiences.",
-
-    "Nihilism":"You question whether objective meaning or universal purpose truly exists, encouraging deep examination of assumptions and beliefs."
-
-};
-
-const philosophyAnalysis = {
+const philosophyData = {
 
     "Humanism":{
+
+        description:
+            "You value human dignity, compassion, reason, and helping people flourish together.",
+
+        meaning:
+            "You generally believe people can improve themselves and society through reason, empathy, and cooperation. You value human dignity, ethical responsibility, and the belief that people can solve problems together.",
 
         strengths:[
             "Shows genuine compassion and empathy toward others.",
@@ -109,6 +35,12 @@ const philosophyAnalysis = {
 
     "Existentialism":{
 
+        description:
+            "You believe meaning is created through personal choice and responsibility.",
+
+        meaning:
+            "You believe life gains meaning through the choices you make. Rather than expecting purpose to be given, you accept responsibility for creating your own direction.",
+
         strengths:[
             "Highly independent thinker.",
             "Accepts responsibility for personal choices.",
@@ -127,11 +59,17 @@ const philosophyAnalysis = {
 
     "Stoicism":{
 
+        description:
+            "You believe wisdom comes from mastering yourself rather than controlling the world.",
+
+        meaning:
+            "You focus on maintaining self-control, emotional resilience, and inner peace. You devote your energy to what you can control while accepting what you cannot.",
+
         strengths:[
             "Remains calm under pressure.",
             "Emotionally resilient during adversity.",
             "Makes rational rather than impulsive decisions.",
-            "Focuses energy on what can actually be controlled."
+            "Focuses on what can actually be controlled."
         ],
 
         blindSpots:[
@@ -144,6 +82,12 @@ const philosophyAnalysis = {
     },
 
     "Confucianism":{
+
+        description:
+            "You value harmony, respect, family, and moral responsibility.",
+
+        meaning:
+            "You place great importance on moral character, respect, family, and social harmony. You believe stable communities begin with responsible individuals.",
 
         strengths:[
             "Values loyalty, respect, and responsibility.",
@@ -163,23 +107,35 @@ const philosophyAnalysis = {
 
     "Naturalism":{
 
+        description:
+            "You trust scientific explanations and the natural world.",
+
+        meaning:
+            "You understand reality primarily through nature and scientific inquiry. Evidence and observation guide how you interpret the world.",
+
         strengths:[
             "Highly evidence-based thinker.",
             "Values scientific reasoning.",
             "Avoids unsupported assumptions.",
-            "Makes objective decisions using observable facts."
+            "Makes objective decisions."
         ],
 
         blindSpots:[
             "May dismiss experiences that cannot be scientifically measured.",
             "Can underestimate emotional or spiritual needs.",
             "May become overly skeptical.",
-            "Sometimes overlooks symbolic or cultural meaning."
+            "Sometimes overlooks symbolic meaning."
         ]
 
     },
 
     "Theism":{
+
+        description:
+            "You believe a divine reality plays an important role in existence.",
+
+        meaning:
+            "You believe a higher power provides purpose, morality, and guidance beyond human understanding.",
 
         strengths:[
             "Finds purpose beyond personal circumstances.",
@@ -199,6 +155,12 @@ const philosophyAnalysis = {
 
     "Pantheism":{
 
+        description:
+            "You see the universe and the divine as deeply interconnected.",
+
+        meaning:
+            "You believe spirituality is found within nature itself and that everything shares a profound connection.",
+
         strengths:[
             "Feels deeply connected with nature.",
             "Values environmental responsibility.",
@@ -209,7 +171,7 @@ const philosophyAnalysis = {
         blindSpots:[
             "May avoid clear moral boundaries.",
             "Can become overly abstract in thinking.",
-            "Sometimes struggles with practical decision-making.",
+            "Sometimes struggles with practical decisions.",
             "May place intuition above evidence."
         ]
 
@@ -217,11 +179,17 @@ const philosophyAnalysis = {
 
     "Agnosticism":{
 
+        description:
+            "You remain open-minded about questions that cannot be answered with certainty.",
+
+        meaning:
+            "Rather than claiming certainty, you recognize the limits of human knowledge and remain open to new evidence and perspectives.",
+
         strengths:[
             "Open-minded toward different beliefs.",
             "Comfortable admitting uncertainty.",
             "Encourages intellectual humility.",
-            "Evaluates claims carefully before accepting them."
+            "Evaluates claims carefully."
         ],
 
         blindSpots:[
@@ -232,14 +200,19 @@ const philosophyAnalysis = {
         ]
 
     },
+        "Pragmatism":{
 
-    "Pragmatism":{
+        description:
+            "You judge ideas by how well they work in practice.",
+
+        meaning:
+            "You evaluate ideas based on their practical results. If something consistently works in real life, you see value in it regardless of abstract theory.",
 
         strengths:[
             "Focuses on practical solutions.",
             "Flexible when circumstances change.",
             "Values real-world results.",
-            "Adapts ideas based on experience."
+            "Learns from experience."
         ],
 
         blindSpots:[
@@ -253,11 +226,17 @@ const philosophyAnalysis = {
 
     "Empiricism":{
 
+        description:
+            "You trust observation, evidence, and experience.",
+
+        meaning:
+            "You believe reliable knowledge comes from observation, experimentation, and evidence rather than assumptions.",
+
         strengths:[
             "Strong respect for evidence.",
             "Learns from observation and experience.",
             "Questions unsupported claims.",
-            "Makes careful, informed decisions."
+            "Makes informed decisions."
         ],
 
         blindSpots:[
@@ -271,11 +250,17 @@ const philosophyAnalysis = {
 
     "Rationalism":{
 
+        description:
+            "You value logic and reason above all else.",
+
+        meaning:
+            "You naturally rely on logic, critical thinking, and careful reasoning when making decisions. You enjoy examining ideas from multiple perspectives before reaching conclusions.",
+
         strengths:[
             "Excellent logical reasoning.",
             "Enjoys solving complex problems.",
             "Evaluates ideas critically.",
-            "Makes consistent, well-reasoned decisions."
+            "Makes consistent and rational decisions."
         ],
 
         blindSpots:[
@@ -288,6 +273,12 @@ const philosophyAnalysis = {
     },
 
     "Idealism":{
+
+        description:
+            "You believe ideas and consciousness are central to reality.",
+
+        meaning:
+            "You place great importance on values, principles, and ideals, often believing that ideas shape reality more than material conditions.",
 
         strengths:[
             "Strong personal principles.",
@@ -307,6 +298,12 @@ const philosophyAnalysis = {
 
     "Utilitarianism":{
 
+        description:
+            "You believe the best actions produce the greatest good for the greatest number.",
+
+        meaning:
+            "You evaluate decisions by their consequences and strive to maximize overall well-being for as many people as possible.",
+
         strengths:[
             "Focuses on maximizing overall well-being.",
             "Evaluates consequences carefully.",
@@ -324,6 +321,12 @@ const philosophyAnalysis = {
     },
 
     "Secular Humanism":{
+
+        description:
+            "You believe people can live meaningful and ethical lives without religion.",
+
+        meaning:
+            "You believe ethics, purpose, and fulfillment can be achieved through human reason, compassion, and responsibility without requiring religious belief.",
 
         strengths:[
             "Promotes ethical living through reason.",
@@ -343,23 +346,35 @@ const philosophyAnalysis = {
 
     "Deism":{
 
+        description:
+            "You believe a creator exists but rarely intervenes.",
+
+        meaning:
+            "You believe a creator established the universe and its natural laws but generally allows it to operate without ongoing intervention.",
+
         strengths:[
             "Balances faith with reason.",
             "Encourages independent thinking.",
-            "Accepts natural laws and science.",
+            "Accepts science alongside belief.",
             "Maintains a broad philosophical perspective."
         ],
 
         blindSpots:[
             "May feel distant from organized religion.",
             "Can leave moral questions largely unanswered.",
-            "Sometimes lacks clear practical guidance.",
-            "May appear detached from spiritual traditions."
+            "Sometimes lacks practical spiritual guidance.",
+            "May appear detached from religious traditions."
         ]
 
     },
 
     "Absurdism":{
+
+        description:
+            "You embrace life even without absolute meaning.",
+
+        meaning:
+            "You recognize that life may not provide objective meaning, yet you believe people can still live joyfully and fully despite uncertainty.",
 
         strengths:[
             "Finds joy despite uncertainty.",
@@ -369,7 +384,7 @@ const philosophyAnalysis = {
         ],
 
         blindSpots:[
-            "May become overly detached from long-term goals.",
+            "May become detached from long-term goals.",
             "Can appear indifferent to deeper meaning.",
             "Sometimes embraces uncertainty too readily.",
             "May struggle with structured belief systems."
@@ -378,6 +393,12 @@ const philosophyAnalysis = {
     },
 
     "Nihilism":{
+
+        description:
+            "You question whether objective meaning truly exists.",
+
+        meaning:
+            "You challenge assumptions about purpose, morality, and meaning, encouraging deep examination of beliefs that others often accept without question.",
 
         strengths:[
             "Questions assumptions fearlessly.",
@@ -396,41 +417,103 @@ const philosophyAnalysis = {
     }
 
 };
-
-// --------------------------------------
-// Load Results
-// --------------------------------------
+// =======================================================
+// LOAD RESULTS
+// =======================================================
 
 window.onload = function () {
 
-    const results = JSON.parse(localStorage.getItem("worldviewScores"));
+    // ----------------------------------
+    // Load saved results
+    // ----------------------------------
+
+    const results = JSON.parse(
+        localStorage.getItem("worldviewScores")
+    );
 
     if (!results || results.length === 0) {
 
-        document.body.innerHTML =
-            "<h2 style='text-align:center;margin-top:100px;'>No Results Found.</h2>";
+        document.body.innerHTML = `
+            <div style="
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                height:100vh;
+                font-family:Arial;
+                color:white;
+                background:#0b1220;
+                text-align:center;
+            ">
+                <div>
+                    <h1>No Results Found</h1>
+                    <p>Please complete the assessment first.</p>
+                    <br>
+                    <button onclick="location.href='index.html'">
+                        Return Home
+                    </button>
+                </div>
+            </div>
+        `;
 
         return;
+
     }
 
-    // --------------------------
+    // ----------------------------------
     // Primary Philosophy
-    // --------------------------
+    // ----------------------------------
+
+    const primary = philosophyData[results[0].name];
 
     document.getElementById("primaryName").textContent =
         results[0].name;
 
     document.getElementById("primaryDescription").textContent =
-        philosophyDescriptions[results[0].name] ||
-        "Description coming soon.";
+        primary.description;
 
     document.getElementById("meaningText").textContent =
-        philosophyMeanings[results[0].name] ||
-        "More information about this philosophy will be available soon.";
+        primary.meaning;
 
-    // --------------------------
-    // Top Three
-    // --------------------------
+    // ----------------------------------
+    // Strengths
+    // ----------------------------------
+
+    const strengthList =
+        document.getElementById("strengthList");
+
+    strengthList.innerHTML = "";
+
+    primary.strengths.forEach(item => {
+
+        strengthList.innerHTML += `
+            <li>${item}</li>
+        `;
+
+    });
+
+    // ----------------------------------
+    // Blind Spots
+    // ----------------------------------
+
+    const blindSpotList =
+        document.getElementById("blindSpotList");
+
+    blindSpotList.innerHTML = "";
+
+    primary.blindSpots.forEach(item => {
+
+        blindSpotList.innerHTML += `
+            <li>${item}</li>
+        `;
+
+    });
+
+    // ----------------------------------
+    // Continue below...
+    // ----------------------------------
+        // ===================================================
+    // TOP THREE PHILOSOPHIES
+    // ===================================================
 
     const topThree = document.getElementById("topThree");
 
@@ -440,25 +523,36 @@ window.onload = function () {
 
         topThree.innerHTML += `
 
-        <div class="result-card">
+            <div class="result-card">
 
-            <h3>#${index+1}</h3>
+                <div class="rank-badge">
+                    #${index+1}
+                </div>
 
-            <h2>${item.name}</h2>
+                <h3>${item.name}</h3>
 
-            <p>${item.percentage}% Match</p>
+                <h4>${item.percentage}% Match</h4>
 
-        </div>
+                <p>
+                    ${
+                        philosophyData[item.name].description
+                    }
+                </p>
+
+            </div>
 
         `;
 
     });
 
-    // --------------------------
-    // Score Bars
-    // --------------------------
 
-    const scoreList = document.getElementById("scoreList");
+
+    // ===================================================
+    // SCORE BARS
+    // ===================================================
+
+    const scoreList =
+        document.getElementById("scoreList");
 
     scoreList.innerHTML = "";
 
@@ -466,118 +560,121 @@ window.onload = function () {
 
         scoreList.innerHTML += `
 
-        <div class="score-item">
+            <div class="score-item">
 
-            <div class="score-header">
+                <div class="score-header">
 
-                <span>${item.name}</span>
+                    <span>${item.name}</span>
 
-                <span>${item.percentage}%</span>
+                    <span>${item.percentage}%</span>
 
-            </div>
+                </div>
 
-            <div class="score-bar">
+                <div class="score-bar">
 
-                <div class="score-fill"
-                     style="width:${item.percentage}%">
+                    <div
+                        class="score-fill"
+                        style="width:${item.percentage}%">
+                    </div>
+
                 </div>
 
             </div>
-
-        </div>
 
         `;
 
     });
 
-    // --------------------------
-    // Radar Chart
-    // --------------------------
 
-    const ctx = document
-        .getElementById("radarChart")
-        .getContext("2d");
 
-    new Chart(ctx, {
+    // ===================================================
+    // RADAR CHART
+    // ===================================================
 
-        type: "radar",
+    const ctx =
+        document
+            .getElementById("radarChart")
+            .getContext("2d");
 
-        data: {
+    new Chart(ctx,{
 
-            labels: results.slice(0,8).map(r => r.name),
+        type:"radar",
 
-            datasets: [{
+        data:{
 
-                data: results.slice(0,8).map(r => r.percentage),
+            labels:
+                results
+                    .slice(0,8)
+                    .map(item=>item.name),
 
-                backgroundColor: "rgba(22,196,255,.25)",
+            datasets:[{
 
-                borderColor: "#16c4ff",
+                label:"Worldview",
 
-                borderWidth: 3,
+                data:
+                    results
+                        .slice(0,8)
+                        .map(item=>item.percentage),
 
-                pointBackgroundColor: "#16c4ff",
+                fill:true,
 
-                pointRadius: 4,
+                backgroundColor:
+                    "rgba(22,196,255,.25)",
 
-                fill: true
+                borderColor:
+                    "#16c4ff",
+
+                borderWidth:3,
+
+                pointBackgroundColor:
+                    "#16c4ff",
+
+                pointRadius:4
 
             }]
 
         },
 
-        options: {
+        options:{
 
-            responsive: true,
+            responsive:true,
 
-            maintainAspectRatio: true,
+            maintainAspectRatio:false,
 
-            plugins: {
+            plugins:{
 
-                legend: {
-
-                    display: false
-
+                legend:{
+                    display:false
                 }
 
             },
 
-            scales: {
+            scales:{
 
-                r: {
+                r:{
 
-                    min: 0,
+                    min:0,
 
-                    max: 100,
+                    max:100,
 
-                    ticks: {
-
-                        display: false
-
+                    ticks:{
+                        display:false
                     },
 
-                    grid: {
-
-                        color: "rgba(255,255,255,.15)"
-
+                    angleLines:{
+                        color:"rgba(255,255,255,.15)"
                     },
 
-                    angleLines: {
-
-                        color: "rgba(255,255,255,.15)"
-
+                    grid:{
+                        color:"rgba(255,255,255,.15)"
                     },
 
-                    pointLabels: {
-
-                        color: "#ffffff",
-
-                        font: {
-
-                            size: 12
-
+                    pointLabels:{
+                        color:"#ffffff",
+                        font:{
+                            size:12,
+                            weight:"bold"
                         }
-
                     }
 
                 }
