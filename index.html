@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +9,6 @@
 
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
@@ -62,7 +60,7 @@
 
 </section>
 
-<!-- ================= ASSESSMENT MODAL ================= -->
+<!-- ================= MODAL ================= -->
 
 <div id="assessmentModal" class="modal">
 
@@ -76,16 +74,12 @@
         </p>
 
         <div class="input-group">
-
-            <label>
-                What should we call you? (Optional)
-            </label>
+            <label>What should we call you? (Optional)</label>
 
             <input
                 type="text"
                 id="nickname"
                 placeholder="Alex, NightOwl, CuriousMind...">
-
         </div>
 
         <div class="input-group">
@@ -95,25 +89,21 @@
             </label>
 
             <select id="knowledge">
-
                 <option>I've never studied philosophy</option>
                 <option>I know a little</option>
                 <option>I know several philosophical ideas</option>
                 <option>I regularly study philosophy</option>
                 <option>I have an advanced understanding</option>
-
             </select>
 
         </div>
 
         <div class="checkbox">
-
             <input type="checkbox" id="agree">
 
             <label for="agree">
                 I agree to anonymously contribute my responses to improve The Worldview Compass.
             </label>
-
         </div>
 
         <div class="instructions">
@@ -121,12 +111,10 @@
             <h3>Before You Begin</h3>
 
             <ul>
-
                 <li>40 thought-provoking statements</li>
-                <li>Approximately 8–12 minutes</li>
-                <li>There are no right or wrong answers</li>
-                <li>Answer honestly based on your beliefs</li>
-
+                <li>8–12 minutes</li>
+                <li>No right or wrong answers</li>
+                <li>Answer honestly</li>
             </ul>
 
         </div>
@@ -139,15 +127,16 @@
 
 </div>
 
-<!-- ================= LOADING SCREEN ================= -->
+<!-- ================= LOADING ================= -->
 
 <div id="loadingScreen">
 
     <div class="loader">
 
-        <img src="images/logo.png"
-             class="loading-logo"
-             alt="Loading">
+        <img
+            src="images/logo.png"
+            class="loading-logo"
+            alt="Loading">
 
         <h2>Preparing Your Assessment</h2>
 
@@ -163,15 +152,15 @@
 
 </div>
 
-<!-- ================= QUIZ SCREEN ================= -->
+<!-- ================= QUIZ ================= -->
 
 <div id="quizScreen" class="quiz-screen">
 
     <div class="quiz-container">
 
-        <div class="quiz-top">
+        <h2>🧭 Worldview Compass</h2>
 
-            <h2>🧭 Worldview Compass</h2>
+        <div class="question-header">
 
             <p id="questionCounter">
                 Question 1 of 40
@@ -183,13 +172,9 @@
 
         </div>
 
-        <div class="question-area">
-
-            <h3 id="questionText">
-                Question goes here...
-            </h3>
-
-        </div>
+        <h3 id="questionText">
+            Question goes here...
+        </h3>
 
         <div class="answers">
 
@@ -252,4 +237,4 @@
 <script src="script.js"></script>
 
 </body>
-</html>
+            </html>
