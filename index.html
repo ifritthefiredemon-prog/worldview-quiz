@@ -1,240 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>The Worldview Compass</title>
-
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Worldview Compass</title>
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<!-- ================= NAVIGATION ================= -->
-
 <nav>
-
-    <div class="logo-container">
-        <img src="images/logo.png" class="logo" alt="Worldview Compass Logo">
-        <h2>Worldview Compass</h2>
-    </div>
-
-    <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Assessment</a>
-        <a href="#">FAQ</a>
-    </div>
-
+  <div class="logo-container">
+    <img src="images/logo.png" class="logo" alt="Logo">
+    <h2>Worldview Compass</h2>
+  </div>
+  <div class="nav-links">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Assessment</a>
+    <a href="#">FAQ</a>
+  </div>
 </nav>
 
-<!-- ================= HERO ================= -->
-
 <section class="hero">
-
-    <div class="hero-left">
-
-        <h1>Discover Your Worldview</h1>
-
-        <p>
-            Explore the beliefs, values, and principles that shape how you
-            understand yourself, others, and the world.
-        </p>
-
-        <button id="openAssessment">
-            Begin Assessment
-        </button>
-
-    </div>
-
-    <div class="hero-right">
-
-        <img src="images/hero.png"
-             alt="Worldview Compass"
-             class="hero-image">
-
-    </div>
-
+  <div class="hero-left">
+    <h1>Discover Your Worldview</h1>
+    <p>Explore the beliefs, values, and principles that shape how you understand yourself, others, and the world.</p>
+    <button id="openAssessment">Begin Assessment</button>
+  </div>
+  <div class="hero-right">
+    <img src="images/hero.png" class="hero-image" alt="Hero">
+  </div>
 </section>
 
-<!-- ================= MODAL ================= -->
-
 <div id="assessmentModal" class="modal">
+  <div class="modal-content">
+    <h2>Welcome!</h2>
+    <p>There are no right or wrong answers. Respond honestly based on what you genuinely believe.</p>
 
-    <div class="modal-content">
-
-        <h2>Welcome!</h2>
-
-        <p>
-            There are no right or wrong answers.
-            Respond honestly based on what you genuinely believe.
-        </p>
-
-        <div class="input-group">
-            <label>What should we call you? (Optional)</label>
-
-            <input
-                type="text"
-                id="nickname"
-                placeholder="Alex, NightOwl, CuriousMind...">
-        </div>
-
-        <div class="input-group">
-
-            <label>
-                How familiar are you with philosophy or worldviews?
-            </label>
-
-            <select id="knowledge">
-                <option>I've never studied philosophy</option>
-                <option>I know a little</option>
-                <option>I know several philosophical ideas</option>
-                <option>I regularly study philosophy</option>
-                <option>I have an advanced understanding</option>
-            </select>
-
-        </div>
-
-        <div class="checkbox">
-            <input type="checkbox" id="agree">
-
-            <label for="agree">
-                I agree to anonymously contribute my responses to improve The Worldview Compass.
-            </label>
-        </div>
-
-        <div class="instructions">
-
-            <h3>Before You Begin</h3>
-
-            <ul>
-                <li>40 thought-provoking statements</li>
-                <li>8–12 minutes</li>
-                <li>No right or wrong answers</li>
-                <li>Answer honestly</li>
-            </ul>
-
-        </div>
-
-        <button id="startQuiz">
-            Begin Journey →
-        </button>
-
+    <div class="input-group">
+      <label>What should we call you? (Optional)</label>
+      <input id="nickname" type="text" placeholder="Alex, NightOwl...">
     </div>
 
-</div>
+    <div class="input-group">
+      <label>How familiar are you with philosophy?</label>
+      <select id="knowledge">
+        <option>I've never studied philosophy</option>
+        <option>I know a little</option>
+        <option>I know several philosophical ideas</option>
+        <option>I regularly study philosophy</option>
+        <option>I have an advanced understanding</option>
+      </select>
+    </div>
 
-<!-- ================= LOADING ================= -->
+    <div class="checkbox">
+      <input id="agree" type="checkbox">
+      <label for="agree">I agree to anonymously contribute my responses.</label>
+    </div>
+
+    <div class="instructions">
+      <h3>Before You Begin</h3>
+      <ul>
+        <li>40 thought-provoking statements</li>
+        <li>8–12 minutes</li>
+        <li>No right or wrong answers</li>
+        <li>Answer honestly</li>
+      </ul>
+    </div>
+
+    <button id="startQuiz">Begin Journey →</button>
+  </div>
+</div>
 
 <div id="loadingScreen">
-
-    <div class="loader">
-
-        <img
-            src="images/logo.png"
-            class="loading-logo"
-            alt="Loading">
-
-        <h2>Preparing Your Assessment</h2>
-
-        <p id="loadingText">
-            Calibrating your Worldview Compass...
-        </p>
-
-        <div class="progressBar">
-            <div id="progressFill"></div>
-        </div>
-
-    </div>
-
+  <div class="loader">
+    <img src="images/logo.png" class="loading-logo" alt="Loading">
+    <h2>Preparing Your Assessment</h2>
+    <p id="loadingText">Calibrating your Worldview Compass...</p>
+    <div class="progressBar"><div id="progressFill"></div></div>
+  </div>
 </div>
-
-<!-- ================= QUIZ ================= -->
 
 <div id="quizScreen" class="quiz-screen">
+  <div class="quiz-container">
 
-    <div class="quiz-container">
+    <h2>🧭 Worldview Compass</h2>
 
-        <h2>🧭 Worldview Compass</h2>
-
-        <div class="question-header">
-
-            <p id="questionCounter">
-                Question 1 of 40
-            </p>
-
-            <div class="quizProgressBar">
-                <div id="quizProgressFill"></div>
-            </div>
-
-        </div>
-
-        <h3 id="questionText">
-            Question goes here...
-        </h3>
-
-        <div class="answers">
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="1">
-                <span>Strongly Disagree</span>
-            </label>
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="2">
-                <span>Disagree</span>
-            </label>
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="3">
-                <span>Somewhat Disagree</span>
-            </label>
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="4">
-                <span>Neutral</span>
-            </label>
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="5">
-                <span>Somewhat Agree</span>
-            </label>
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="6">
-                <span>Agree</span>
-            </label>
-
-            <label class="answer-card">
-                <input type="radio" name="answer" value="7">
-                <span>Strongly Agree</span>
-            </label>
-
-        </div>
-
-        <div class="quiz-buttons">
-
-            <button id="prevQuestion">
-                ← Previous
-            </button>
-
-            <button id="nextQuestion">
-                Next →
-            </button>
-
-        </div>
-
+    <div class="question-header">
+      <p id="questionCounter">Question 1 of 40</p>
+      <div class="quizProgressBar">
+        <div id="quizProgressFill"></div>
+      </div>
     </div>
 
-</div>
+    <h3 id="questionText">Question goes here...</h3>
 
-<!-- ================= JAVASCRIPT ================= -->
+    <div class="answers">
+      <label class="answer-option"><input type="radio" name="answer" value="1"><span>Strongly Disagree</span></label>
+      <label class="answer-option"><input type="radio" name="answer" value="2"><span>Disagree</span></label>
+      <label class="answer-option"><input type="radio" name="answer" value="3"><span>Somewhat Disagree</span></label>
+      <label class="answer-option"><input type="radio" name="answer" value="4"><span>Neutral</span></label>
+      <label class="answer-option"><input type="radio" name="answer" value="5"><span>Somewhat Agree</span></label>
+      <label class="answer-option"><input type="radio" name="answer" value="6"><span>Agree</span></label>
+      <label class="answer-option"><input type="radio" name="answer" value="7"><span>Strongly Agree</span></label>
+    </div>
+
+    <div class="quiz-buttons">
+      <button id="prevQuestion">← Previous</button>
+      <button id="nextQuestion">Next →</button>
+    </div>
+
+  </div>
+</div>
 
 <script src="questions.js"></script>
 <script src="script.js"></script>
 
 </body>
-            </html>
+                                       </html>
