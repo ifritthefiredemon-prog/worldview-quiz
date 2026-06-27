@@ -484,7 +484,10 @@ const nickname =
         return;
 
     }
-
+document.getElementById("resultsSubtitle").innerHTML =
+    `Congratulations, <strong>${nickname}</strong>!<br>
+    Your assessment has been completed successfully.
+    Below is your personalized philosophical worldview analysis.`;
     // ----------------------------------
     // Primary Philosophy
     // ----------------------------------
