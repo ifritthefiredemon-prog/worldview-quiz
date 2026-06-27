@@ -91,9 +91,45 @@ function startLoading() {
 
             quizScreen.classList.add("show");
 
-            loadQuestion();
+            function loadQuestion() {
 
+    const question = questions[currentQuestion];
+
+    questionCounter.textContent =
+        `Question ${currentQuestion + 1} of ${questions.length}`;
+
+    questionText.textContent = question.statement;
+
+    quizProgressFill.style.width =
+        ((currentQuestion + 1) / questions.length) * 100 + "%";
+
+    // Restore previously selected answer
+    document
+        .querySelectorAll('input[name="answer"]')
+        .forEach(radio => radio.checked = false);
+
+    if (answers[currentQuestion] !== null) {
+
+        const saved = document.querySelector(
+            `input[name="answer"][value="${answers[currentQuestion]}"]`
+        );
+
+        if (saved) {
+            saved.checked = true;
         }
+
+    }
+
+    // Update button text
+    if (currentQuestion === questions.length - 1) {
+        nextButton.textContent = "Finish";
+    } else {
+        nextButton.textContent = "Next →";
+    }
+
+    prevButton.disabled = currentQuestion === 0;
+
+            }
 
     },20);
 
