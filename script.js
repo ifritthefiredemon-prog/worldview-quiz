@@ -160,11 +160,21 @@ nextButton.addEventListener("click", () => {
 
     if (currentQuestion === questions.length - 1) {
 
-        alert("Quiz Complete! (Results coming next)");
+    // Calculate philosophy scores
+    const scores = calculateScores(questions, answers);
 
-        console.log(answers);
+    console.log(scores);
 
-        return;
+    // Save for the results page
+    localStorage.setItem(
+        "worldviewScores",
+        JSON.stringify(scores)
+    );
+
+    // Go to results page
+    window.location.href = "results.html";
+
+    return;
 
     }
 
