@@ -47,9 +47,23 @@ modal.addEventListener("click", (e) => {
 // ---------- BEGIN QUIZ ----------
 
 startButton.addEventListener("click", () => {
+
+    // Save nickname
+    const nickname = document
+        .getElementById("nickname")
+        .value
+        .trim();
+
+    localStorage.setItem(
+        "worldviewNickname",
+        nickname || "Explorer"
+    );
+
     modal.classList.remove("show");
     loadingScreen.classList.add("show");
+
     startLoading();
+
 });
 
 // ---------- LOADING ----------
