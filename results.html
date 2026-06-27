@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
@@ -9,6 +10,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </head>
 
 <body>
@@ -17,41 +20,89 @@
 
     <div class="results-container">
 
-        <h1>🧭 Your Worldview Compass</h1>
+        <header class="results-header">
 
-        <p class="results-subtitle">
-            Based on your responses, these philosophies most closely
-            reflect your worldview.
-        </p>
+            <img src="images/logo.png" class="results-logo" alt="Worldview Compass">
 
-        <!-- Main Philosophy -->
+            <h1>Your Worldview Compass</h1>
 
-        <div class="primary-card">
+            <p class="results-subtitle">
+                Your assessment has been completed successfully.
+                Below is a personalized analysis of your philosophical worldview.
+            </p>
 
-            <h2 id="primaryName">Loading...</h2>
+        </header>
+
+        <!-- Primary Philosophy -->
+
+        <section class="primary-card">
+
+            <div class="primary-badge">
+                Primary Philosophy
+            </div>
+
+            <h2 id="primaryName">
+                Loading...
+            </h2>
 
             <p id="primaryDescription">
                 Calculating your worldview...
             </p>
 
-        </div>
+        </section>
 
-        <!-- Top Three -->
+        <!-- Top Philosophies -->
 
-        <h2 class="section-title">Top Philosophies</h2>
+        <section>
 
-        <div id="topThree"></div>
+            <h2 class="section-title">
+                Top Three Philosophies
+            </h2>
+
+            <div id="topThree" class="top-grid">
+
+            </div>
+
+        </section>
+
+        <!-- Radar Chart -->
+
+        <section>
+
+            <h2 class="section-title">
+                Worldview Profile
+            </h2>
+
+            <div class="chart-card">
+
+                <canvas id="radarChart"></canvas>
+
+            </div>
+
+        </section>
 
         <!-- All Scores -->
 
-        <h2 class="section-title">Overall Scores</h2>
+        <section>
 
-        <div id="scoreList"></div>
+            <h2 class="section-title">
+                Philosophy Scores
+            </h2>
+
+            <div id="scoreList">
+
+            </div>
+
+        </section>
+
+        <!-- Buttons -->
 
         <div class="results-buttons">
 
             <button onclick="location.href='index.html'">
-                Retake Assessment
+
+                Take Assessment Again
+
             </button>
 
         </div>
@@ -63,4 +114,5 @@
 <script src="results.js"></script>
 
 </body>
+
 </html>
