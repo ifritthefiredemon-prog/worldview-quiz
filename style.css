@@ -975,3 +975,69 @@ button{
 }
 
 }
+/* =====================================
+   MEANING CARD
+===================================== */
+
+.meaning-card{
+    background:#1f2937;
+    border-radius:18px;
+    padding:28px;
+    margin:30px 0;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.meaning-card h2{
+    margin-bottom:16px;
+    color:#16c4ff;
+    font-size:1.6rem;
+}
+
+.meaning-card p{
+    color:#d1d5db;
+    line-height:1.8;
+    font-size:1rem;
+}
+/* =====================================
+   STRENGTHS & BLIND SPOTS
+===================================== */
+
+.analysis-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    margin:30px 0;
+}
+
+.analysis-card{
+    background:#1f2937;
+    border-radius:18px;
+    padding:24px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.analysis-card h2{
+    color:#16c4ff;
+    margin-bottom:18px;
+    font-size:1.4rem;
+}
+
+.analysis-card ul{
+    padding-left:20px;
+}
+
+.analysis-card li{
+    margin-bottom:12px;
+    color:#d1d5db;
+    line-height:1.6;
+}
+
+@media(max-width:768px){
+
+.analysis-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
