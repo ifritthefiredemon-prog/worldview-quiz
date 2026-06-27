@@ -1041,3 +1041,88 @@ button{
 }
 
 }
+/* =====================================
+   FEEDBACK
+===================================== */
+
+.feedback-card{
+
+    margin-top:60px;
+
+    background:#1f2937;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.feedback-card h2{
+
+    margin-bottom:18px;
+
+    font-size:2rem;
+
+}
+
+.feedback-card p{
+
+    color:#d1d5db;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
+
+.feedback-button{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    padding:16px 36px;
+
+    background:linear-gradient(135deg,#16c4ff,#0078ff);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:bold;
+
+    transition:.25s;
+
+}
+
+.feedback-button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(0,120,255,.35);
+
+}
+
+.creator-box{
+
+    margin-top:40px;
+
+    padding-top:25px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+.version{
+
+    color:#7dd3fc;
+
+    font-size:.95rem;
+
+}
